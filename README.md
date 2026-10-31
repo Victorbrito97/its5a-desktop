@@ -1,25 +1,22 @@
 # ITS5A Desktop — JavaFX, SSH y SQLite
 
-Aplicación académica para un equipo de dos integrantes. Conecta por SSH a un servidor, consulta las tablas del esquema `its5a` en MariaDB/MySQL y descarga la tabla elegida a SQLite. Permite crear, consultar, actualizar y eliminar registros de esa copia, incluso sin conexión.
+ Permite crear, consultar, actualizar y eliminar registros de esa copia, incluso sin conexión.
 
-**Integrantes:** completar nombres, matrícula y grupo antes de entregar.
+**Integrantes:** victor manuel pech brito 58808 
+                cinthia guadalupe trejo moo 58807
 
 ## Ejecutar
 
-1. Instala un **JDK 17 o superior** y **Maven 3.9 o superior**. Comprueba `java -version` y `mvn -version`; Maven debe usar el JDK.
-2. Extrae el ZIP y abre una terminal dentro de `Its5aDesktop`, donde está `pom.xml`.
-3. Ejecuta:
+ Ejecuta:
 
 ```bash
 mvn clean test
 mvn javafx:run
 ```
 
-Maven descarga las dependencias en la primera ejecución. En IntelliJ o NetBeans abre el proyecto Maven usando `pom.xml`. No hace falta instalar SQLite ni configurar un SDK JavaFX manualmente. Se necesita un entorno gráfico de escritorio. No es una aplicación web.
 
 ## Preparar la conexión real
 
-El enunciado no especifica el motor remoto: este proyecto asume **MariaDB/MySQL**. Confirma este dato con tu docente. También necesitas:
 
 - Host y puerto SSH, usuario y contraseña SSH.
 - SSH con autenticación por contraseña y reenvío TCP habilitados.
@@ -90,7 +87,7 @@ Para comprobar la conexión real, usa una tabla de ensayo autorizada: conecta al
 
 El host y sus credenciales no fueron proporcionados al preparar este proyecto: **la integración SSH con el servidor de la clase queda pendiente de probar**. Las capturas de datos de demostración no sustituyen esa prueba.
 
-## Reparto sugerido para dos integrantes
+## Reparto de temas
 
 | Integrante | Implementación y defensa |
 |---|---|
@@ -115,8 +112,7 @@ git remote add origin https://github.com/TU_USUARIO/its5a-desktop.git
 git push -u origin main
 ```
 
-Verifica que GitHub muestre `pom.xml`, `src`, este README y la carpeta **Screenshots**. No publiques contraseñas, bases descargadas, claves SSH ni datos personales. `.gitignore` excluye las bases y archivos de compilación. Entrega el enlace del repositorio.
-
+Verifica que GitHub muestre `pom.xml`, `src`, este README y la carpeta **Screenshots**. 
 ## Solución de problemas
 
 - **UnknownHostKey / reject HostKey**: revisa host, puerto, archivo `known_hosts` y la huella registrada.
